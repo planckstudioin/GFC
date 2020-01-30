@@ -1,7 +1,7 @@
-package `in`.ygohel18.gfcadmin.adapter
+package `in`.ygohel18.admin.gfc.adapter
 
-import `in`.ygohel18.gfcadmin.R
-import `in`.ygohel18.gfcadmin.model.Student
+import `in`.ygohel18.admin.gfc.R
+import `in`.ygohel18.admin.gfc.model.Student
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -32,7 +32,7 @@ class StudentAdapter(private val context: Context, private val studentModelArray
         if (convertView == null) {
             holder = ViewHolder()
             val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-            convertView = inflater.inflate(R.layout.student_list, null, true)
+            convertView = inflater.inflate(R.layout.student_list_item, null, true)
 
             holder.idEdit = convertView!!.findViewById(R.id.student_id) as TextView
             holder.nameEdit = convertView.findViewById(R.id.student_name) as TextView
@@ -43,8 +43,8 @@ class StudentAdapter(private val context: Context, private val studentModelArray
             holder = convertView.tag as ViewHolder
         }
 
-        holder.idEdit!!.text = studentModelArrayList[position].id.toString()
-        holder.nameEdit!!.text = studentModelArrayList[position].fullName
+        holder.idEdit!!.text = studentModelArrayList[position].getStudentID().toString()
+        holder.nameEdit!!.text = studentModelArrayList[position].getStudentName()
         return convertView
     }
 

@@ -1,6 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
 
+    <TextView
+        android:id="@+id/student_id"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="#FFFFFF"
+        android:gravity="center"
+        android:text="ID"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/student_name"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:alpha="0.8"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        android:text="Student Name"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        tools:ignore="HardcodedText" />
 </LinearLayout>
